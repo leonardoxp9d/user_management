@@ -9,9 +9,15 @@ class GetUserProfileController {
 
     const getUserProfileUseCase = container.resolve(GetUserProfileUseCase);
 
-    const userProfile = await getUserProfileUseCase.execute(email as string);
+    const user = await getUserProfileUseCase.execute(email as string);
 
-    return response.status(201).json(userProfile);
+    const userProfile = {
+      name: user.name,
+      email: user.email,
+      username: user.username,
+    };
+
+    return response.status(200).json(userProfile);
   }
 }
 

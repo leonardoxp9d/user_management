@@ -1,13 +1,8 @@
 import { inject, injectable } from "tsyringe";
 
+import { User } from "@modules/accounts/infra/typeorm/entities/User";
 import { IUsersRepository } from "@modules/accounts/repositories/IUsersRepository";
 import { AppError } from "@shared/errors/AppError";
-
-interface IUserProfile {
-  name: string;
-  username: string;
-  email: string;
-}
 
 @injectable()
 class GetUserProfileUseCase {
@@ -16,20 +11,14 @@ class GetUserProfileUseCase {
     private usersRepository: IUsersRepository
   ) {}
 
-  async execute(email: string): Promise<IUserProfile> {
+  async execute(email: string): Promise<User> {
     const user = await this.usersRepository.findByEmail(email);
 
     if (!user) {
       throw new AppError("User does not exists");
     }
 
-    const userProfile = {
-      name: user.name,
-      email: user.email,
-      username: user.username,
-    };
-
-    return userProfile;
+    return user;
   }
 }
 

@@ -1,3 +1,4 @@
+import { classToPlain } from "class-transformer";
 import { Request, Response } from "express";
 import { container } from "tsyringe";
 
@@ -9,7 +10,7 @@ class ListUsersController {
 
     const users = await listUsersUseCase.execute();
 
-    return response.status(201).json(users);
+    return response.status(201).json(classToPlain(users));
   }
 }
 
