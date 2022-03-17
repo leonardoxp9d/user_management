@@ -1,5 +1,5 @@
 # user_management
-API para gerenciar usuários, nela e possível criar, editar, visualizar dados de 1 ou de todos os usuários vários, e deletar,
+API para gerenciar usuários, nela e possível criar, editar, deletar, e também visualizar dados de 1 ou de todos os usuários 
 <br><br>
 *OBS.:
 nas rotas de editar, visualizar dados 1 usuário, e deletar, para utilizar essas rotas 
