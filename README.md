@@ -6,7 +6,7 @@ nas rotas de editar, visualizar dados 1 usuário, e deletar, para utilizar essas
 e necessário saber o email do usuário, achamos mais fácil assim do que utilizar o id
 do usuário
 
-## Tecnólogias Utilizadas
+## Tecnologias Utilizadas
 <li>VSCode</li>
 <li>Typescript</li>
 <li>Express</li>
@@ -72,4 +72,4 @@ Olhando banco de dados podemos ver que foi criado o usuário, no caso aqui usamo
 <br><br>
 *OBS.:<br>
 Se o username e o email, já estiverem sendo usados por outro usuário,
-irá exibir um erro informando que já sendo utilizado
+irá exibir um erro informando que já sendo utilizado, e você deverá trocar
