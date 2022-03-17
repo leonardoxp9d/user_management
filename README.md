@@ -12,6 +12,7 @@ do usuário
 <li>Express</li>
 <li>Typeorm</li>
 <li>Postgress</li>
+<li>Docker</li>
 
 ## Requisitos
 <li>yarn 1.22.17 ou superior</li>
