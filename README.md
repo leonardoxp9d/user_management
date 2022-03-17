@@ -6,6 +6,13 @@ nas rotas de editar, visualizar dados 1 usuário, e deletar, para utilizar essas
 e necessário saber o email do usuário, achamos mais fácil assim do que utilizar o id
 do usuário
 
+## Tecnólogias Utilizadas
+<li>VSCode</li>
+<li>Typescript</li>
+<li>Express</li>
+<li>Typeorm</li>
+<li>Postgress</li>
+
 ## Requisitos
 <li>yarn 1.22.17 ou superior</li>
 <li>node v14.17.3 ou superior</li>
