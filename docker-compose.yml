@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+  database:
+    image: postgres
+    container_name: database-user-management
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=databaseuser
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=user-management
+    volumes:
+      - pgdata:/data/postgres-user-management
+
+  app:
+    build: .
+    container_name: user-management
+    restart: always
+    ports: 
+      - 3337:3337
+    volumes:
+      - .:/usr/management
+    links:
+      - database
+    depends_on:
+      - database
+
+volumes:
+  pgdata:
+    driver: local
