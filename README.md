@@ -124,33 +124,9 @@ If the user is not registered in the database, an error message will be displaye
 ![image](https://user-images.githubusercontent.com/54649877/159059911-06c46e3a-1d5f-49ef-a6c3-2da3fd3b94a3.png)
 
 
-### POST
-Rota de criação do usuário, ao usar a url: http://localhost:3337/users na rota post,
-enviando os dados em json
-
-Exemplo: <br>
-{ <br>
-	"name": "nome", <br>
-	"username": "apelido", <br>
-	"email": "email", <br>
-	"password": "senha"	<br>
-}<br>
-Se ocorrer tudo bem, ele entrega como resposta com o status code como 201
-e uma messagem de Usuário criado com sucesso
-<br>
-![image](https://user-images.githubusercontent.com/54649877/158878290-809a65dd-6c32-4b77-b17c-8f601df04366.png)
-<br><br>
-Olhando banco de dados podemos ver que foi criado o usuário, no caso aqui usamos a ferramenta Beekeeper para visualizar melhor
-![image](https://user-images.githubusercontent.com/54649877/158878644-6a16ffa4-34bd-46b4-8c31-83db6f450d74.png)
-
-*OBS.:<br>
-Se o username e o email, já estiverem sendo usados por outro usuário,
-irá exibir um erro informando que já sendo utilizado, e você deverá trocar
-
-
 ## Feature
 
-  - CRUD users
+* CRUD users
 
 
 ## Versioning
