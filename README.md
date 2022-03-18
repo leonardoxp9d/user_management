@@ -1,4 +1,4 @@
-![Logo of the project](https://user-images.githubusercontent.com/54649877/159068073-38d48e5d-eed4-4c56-90e6-dcaef65c4348.png)
+![Logo of the project](https://user-images.githubusercontent.com/54649877/159092862-8490a67a-624d-4b3d-8359-0df9f2e09e97.png)
 
 # User Management
 
@@ -47,9 +47,7 @@ Make sure that port 3337 is free to use the server.
 <br>
 if not you will have to change it in the src/shared/infra/http/server.ts file, and also in the Dockerfile and docker-compose.yml file that are at the root of the project. 
 <br><br>
-Port 5432 must also be open to be able to use the postgres database <br>
-Otherwise you will have to reconfigure in the docker-compose.yml file and in the ormconfig.json <br>
-But I recommend that you do not change the database port 
+Port 5432 must be open to be able to use the postgres database
 
 ## How to use routes
 
