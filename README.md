@@ -29,12 +29,16 @@ Here are the technologies used in this project.
 
 ## Getting started
 
-* To install gems:
->    $ bundle install
-* To create the bank and do as migrations:
->    $ rake db:create db:migrate db:seed
-* To run the project:
->    $ rails s
+* To install dependencies:
+>    $ yarn
+* To create the bank and application server:
+>    $ docker-compose up -d
+* To create the migration:
+>    $ yarn typeorm migration:run
+* To view project logs:
+>    $ docker logs user-management -f
+* To see if the database and the server are running in docker:
+>    $ docker ps
 
 ## How to use
 
@@ -62,7 +66,7 @@ Here will be the images and descriptions. Principal content.
 
 ## Authors
 
-* **YOUR NAME**: @YOUR_GITHUB_NICKNAME (https://github.com/YOUR_GITHUB_NICKNAME)
+* **Leonardo Soares**: @leonardoxp9d (https://github.com/leonardoxp9d)
 
 
 Please follow github and join us!
