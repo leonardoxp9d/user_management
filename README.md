@@ -1,6 +1,6 @@
 ![Logo of the project](http://logo_link)
 
-## User Management
+# User Management
 
 API to manage users, it is possible to create, edit, delete, and also view data of 1 or all registered users
 
@@ -15,7 +15,7 @@ Here are the technologies used in this project.
 * Typeorm 0.2.45
 * Docker 20.10.7 
 * Docker-compose 1.28.5 
-* Postgres 8.7.3
+* PostgresSQL 8.7.3
 
 
 ## Services Used
@@ -28,6 +28,7 @@ Here are the technologies used in this project.
 * Prettier 2.5.1
 
 ## Getting started
+1. You must have Docker installed 
 
 * To install dependencies:
 >    $ yarn
@@ -40,6 +41,18 @@ Here are the technologies used in this project.
 * To see if the database and the server are running in docker:
 >    $ docker ps
 
+*OBS.: <br>
+Make sure that port 3337 is free to use the server. 
+<br>
+if not you will have to change it in the src/shared/infra/http/server.ts file, and also in the Dockerfile and docker-compose.yml file that are at the root of the project. 
+<br><br>
+Port 5232 must also be open to be able to use the postgres database <br>
+Otherwise you will have to reconfigure in the docker-compose.yml file and in the ormconfig.json <br>
+But we recommend that you do not change the database port 
+
+A porta 5232 também deve está liberada para poder utilizar o banco de dados postgres,
+se não terá reconfigurar no arquivo docker-compose.yml e no ormconfig.json
+Mas recomendamos que não troque a porta do banco de dados
 ## How to use
 
 Here will be the images and descriptions. Principal content.
@@ -47,16 +60,7 @@ Here will be the images and descriptions. Principal content.
 
 ## Features
 
-  - Here will be the features.
-
-
-## Links
-
-  - Link of deployed application: (if has been deployed)
-  - Repository: https://link_of_repository
-    - In case of sensitive bugs like security vulnerabilities, please contact
-      YOUR EMAIL directly instead of using issue tracker. We value your effort
-      to improve the security and privacy of this project!
+  - CRUD users
 
 
 ## Versioning
@@ -117,14 +121,7 @@ para executar a migration e criar a tabela de Users no banco de dados
 <br>
 Agora e só utilizar as rotas, para conseguir visualizar e testar as rotas você utilizar ferramentas como o Insomnia ou escolher uma de sua preferencia
 <br><br>
-*OBS.: <br>
-Certifique-se de que a porta 3337 esteja libera para poder usar o server,
-Se não você terá que trocar ela no arquivo src/shared/infra/http/server.ts,
-e também no arquivo Dockerfile e no docker-compose.yml que ficam na raiz do projeto.
-<br><br>
-A porta 5232 também deve está liberada para poder utilizar o banco de dados postgres,
-se não terá reconfigurar no arquivo docker-compose.yml e no ormconfig.json
-Mas recomendamos que não troque a porta do banco de dados
+
 <br><br>
 Como aplicação está sendo executada dentro do docker, para ver algum log dela,
 use o comando: docker logs user-management -f
