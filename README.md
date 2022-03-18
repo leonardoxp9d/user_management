@@ -48,14 +48,76 @@ if not you will have to change it in the src/shared/infra/http/server.ts file, a
 <br><br>
 Port 5232 must also be open to be able to use the postgres database <br>
 Otherwise you will have to reconfigure in the docker-compose.yml file and in the ormconfig.json <br>
-But we recommend that you do not change the database port 
+But I recommend that you do not change the database port 
 
-A porta 5232 também deve está liberada para poder utilizar o banco de dados postgres,
-se não terá reconfigurar no arquivo docker-compose.yml e no ormconfig.json
-Mas recomendamos que não troque a porta do banco de dados
-## How to use
+## How to use routes
 
-Here will be the images and descriptions. Principal content.
+### POST - Create User
+User creation route. <br> 
+when using the url: `http://localhost:3337/users` in the post route, <br>
+sending data in json, by request.body: 
+<br>
+Example: <br>
+~~~javascript
+{
+  "name": "Leonardo Soares",
+  "username": "leonardo",
+  "email": "leonardo@gmail.com",
+  "password": "123456"	
+}
+~~~
+If all goes well, it delivers as a response with the status code as: `201` <br>
+and a message: `User created successfully!` <br>
+I used the Insomnia tool to check:
+<br>
+![image](https://user-images.githubusercontent.com/54649877/158878290-809a65dd-6c32-4b77-b17c-8f601df04366.png)
+<br><br>
+
+I used the Beekeeper tool to better visualize and verify if the user was really registered: 
+![image](https://user-images.githubusercontent.com/54649877/158878644-6a16ffa4-34bd-46b4-8c31-83db6f450d74.png)
+<br><br>
+*OBS.:<br>
+If the username and email are already being used by another user, <br>
+will display an error stating that it is already being used, and you must switch to complete the operation. 
+
+### Get - Get User Profile
+Route to get data from 1 user. <br>
+When using the url : `http://localhost:3337/users` in the get route <br>
+sending a request.query, informing the desired user's email. <br> 
+If the user is registered, it will return as a response the data: name, username and email 
+Example:
+![image](https://user-images.githubusercontent.com/54649877/159034372-8a50cd1f-3fda-4109-b557-e0f5576151d9.png)
+<br><br>
+*OBS.:<br>
+If the user is not registered in the database, an error message will be displayed: `User does not exists!`
+
+
+
+
+
+
+### POST
+Rota de criação do usuário, ao usar a url: http://localhost:3337/users na rota post,
+enviando os dados em json
+<br>
+Exemplo: <br>
+{ <br>
+	"name": "nome", <br>
+	"username": "apelido", <br>
+	"email": "email", <br>
+	"password": "senha"	<br>
+}<br>
+Se ocorrer tudo bem, ele entrega como resposta com o status code como 201
+e uma messagem de Usuário criado com sucesso
+<br>
+![image](https://user-images.githubusercontent.com/54649877/158878290-809a65dd-6c32-4b77-b17c-8f601df04366.png)
+<br><br>
+Olhando banco de dados podemos ver que foi criado o usuário, no caso aqui usamos a ferramenta Beekeeper para visualizar melhor
+![image](https://user-images.githubusercontent.com/54649877/158878644-6a16ffa4-34bd-46b4-8c31-83db6f450d74.png)
+<br><br>
+*OBS.:<br>
+Se o username e o email, já estiverem sendo usados por outro usuário,
+irá exibir um erro informando que já sendo utilizado, e você deverá trocar
 
 
 ## Features
