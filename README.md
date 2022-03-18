@@ -1,3 +1,80 @@
+![Logo of the project](http://logo_link)
+
+## User Management
+
+API to manage users, it is possible to create, edit, delete, and also view data of 1 or all registered users
+
+
+## Technology 
+
+Here are the technologies used in this project.
+
+* Node v14.17.3
+* Yarn 1.22.17
+* Typescript 4.5.5
+* Typeorm 0.2.45
+* Docker 20.10.7 
+* Docker-compose 1.28.5 
+* Postgres 8.7.3
+
+
+## Services Used
+
+* Github
+* VScode 1.63.2
+* Insomnia 2021.4.1
+* Beekeeper 3.1.0
+* Eslint 8.8.0
+* Prettier 2.5.1
+
+## Getting started
+
+* To install gems:
+>    $ bundle install
+* To create the bank and do as migrations:
+>    $ rake db:create db:migrate db:seed
+* To run the project:
+>    $ rails s
+
+## How to use
+
+Here will be the images and descriptions. Principal content.
+
+
+## Features
+
+  - Here will be the features.
+
+
+## Links
+
+  - Link of deployed application: (if has been deployed)
+  - Repository: https://link_of_repository
+    - In case of sensitive bugs like security vulnerabilities, please contact
+      YOUR EMAIL directly instead of using issue tracker. We value your effort
+      to improve the security and privacy of this project!
+
+
+## Versioning
+
+1.0.0.0
+
+
+## Authors
+
+* **YOUR NAME**: @YOUR_GITHUB_NICKNAME (https://github.com/YOUR_GITHUB_NICKNAME)
+
+
+Please follow github and join us!
+Thanks to visiting me and good coding!
+
+
+
+
+
+
+
+
 # user_management
 API para gerenciar usuários, nela e possível criar, editar, deletar, e também visualizar dados de 1 ou de todos os usuários cadastrados
 <br><br>
