@@ -28,7 +28,8 @@ Here are the technologies used in this project.
 * Prettier 2.5.1
 
 ## Getting started
-1. You must have Docker installed 
+### Prerequisites
+You must have node, yarn and docker installed 
 
 * To install dependencies:
 >    $ yarn
@@ -46,7 +47,7 @@ Make sure that port 3337 is free to use the server.
 <br>
 if not you will have to change it in the src/shared/infra/http/server.ts file, and also in the Dockerfile and docker-compose.yml file that are at the root of the project. 
 <br><br>
-Port 5232 must also be open to be able to use the postgres database <br>
+Port 5432 must also be open to be able to use the postgres database <br>
 Otherwise you will have to reconfigure in the docker-compose.yml file and in the ormconfig.json <br>
 But I recommend that you do not change the database port 
 
@@ -54,7 +55,7 @@ But I recommend that you do not change the database port
 
 ### POST - Create User
 User creation route. <br> 
-when using the url: `http://localhost:3337/users` in the post route, <br>
+When accessing the url: `http://localhost:3337/users` using http `post` method, <br>
 sending data in json, by request.body: 
 <br>
 Example: <br>
@@ -82,7 +83,7 @@ will display an error stating that it is already being used, and you must switch
 
 ### Get - Get User Profile
 Route to get data from 1 user. <br>
-When using the url : `http://localhost:3337/users` in the get route <br>
+When accessing the url: `http://localhost:3337/users` using http `get` method  <br>
 sending a request.query, informing the desired user's email. <br> 
 If the user is registered, it will return as a response the data: name, username and email 
 Example:
@@ -90,8 +91,22 @@ Example:
 <br><br>
 *OBS.:<br>
 If the user is not registered in the database, an error message will be displayed: `User does not exists!`
+![image](https://user-images.githubusercontent.com/54649877/159051283-39c89cb9-1b6e-42e4-8c6f-be891888deb3.png)
 
+### Get - List Users
+Route to list all registered users <br>
+When accessing the url: `http://localhost:3337/users/listUsers` using http `get` method <br>
+The route will deliver as a response the data of all users registered in the database.
+![image](https://user-images.githubusercontent.com/54649877/159051963-af67655b-c0d8-4409-877a-ea93db7b71b9.png)
 
+### PUT - Update User
+Route to list all registered userso <br>
+When accessing the url: `http://localhost:3337/users/"emailUser"` using http `put` method <br>
+The email of the user you want to update must be sent in the route param <br>
+And in the request body, you put the data you want to change, <br>
+can be name, username, and email, it has to be in json format 
+Example:
+![image](https://user-images.githubusercontent.com/54649877/159056644-fbbe1e12-dacd-49f8-90c1-ac35f32ed9ad.png)
 
 
 
