@@ -13,8 +13,8 @@ class GetUserProfileController {
 
     const userProfile = {
       name: user.name,
-      email: user.email,
       username: user.username,
+      email: user.email,
     };
 
     return response.status(200).json(userProfile);

@@ -14,7 +14,7 @@ class DeleteUserUseCase {
     const user = await this.usersRepository.findByEmail(email);
 
     if (!user) {
-      throw new AppError("User does not exists");
+      throw new AppError("User does not exists!");
     }
 
     await this.usersRepository.delete(email);

@@ -13,9 +13,11 @@ class ListUsersUseCase {
 
   async execute(): Promise<User[]> {
     const users = await this.usersRepository.findAll();
-    if (!users) {
-      throw new AppError("There is no registered user!");
+
+    if (users.length === 0) {
+      throw new AppError("No user is registered!");
     }
+
     return users;
   }
 }
